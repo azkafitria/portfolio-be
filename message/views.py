@@ -18,6 +18,6 @@ def send_message(request):
         message = data["message"]
         message = Message(name=name, email=email, phone=phone, message=message)
         message.save()
-        return HttpResponse(json.dumps({"status": 400, "message": "OK"}), content_type="application/json")
+        return HttpResponse(json.dumps({"status": 200, "message": "OK"}), content_type="application/json")
     except KeyError:
         return HttpResponseBadRequest(json.dumps({"status": 400, "message": "Bad request"}), content_type="application/json")
