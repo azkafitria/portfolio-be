@@ -84,12 +84,12 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.postgresql',
-        'URL': os.getenv('DATABASE_URL'),
-        'NAME': os.getenv('PGDATABASE'),
-        'USER': os.getenv('PGUSER'),
-        'PASSWORD': os.getenv('PGPASSWORD'),
-        'HOST': os.getenv('PGHOST'),
-        'PORT': os.getenv('PGPORT'),
+        'URL': os.getenv('DATABASE_URL', 'postgresql://postgres:A2jbQWeQYOllWxMX8AF5@containers-us-west-96.railway.app:6331/railway'),
+        'NAME': os.getenv('PGDATABASE', 'railway'),
+        'USER': os.getenv('PGUSER', 'postgres'),
+        'PASSWORD': os.getenv('PGPASSWORD', 'A2jbQWeQYOllWxMX8AF5'),
+        'HOST': os.getenv('PGHOST', 'containers-us-west-96.railway.app'),
+        'PORT': os.getenv('PGPORT', 6331),
     }
 }
 
